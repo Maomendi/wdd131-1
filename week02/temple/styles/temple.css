@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(211, 63%, 65%);
+    color: white;
+    padding: 1rem;
+}
+
+
+.nav-branding{
+    margin-left: 1rem;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.nav-item{
+    margin: 0 1rem;
+}
+
+
+
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    color: rgb(180, 28, 28);
+}
+
+
+main{
+    text-align: center;
+    margin: 2rem;
+}
+
+header{
+    margin-bottom: 2rem;
+    font-size: large;
+}
+
+.Pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 200px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    padding:2rem;
+    margin: 0 auto
+}
+
+
+.picture-container p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+footer {
+    margin: 0.5rem;
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p{
+    margin: 0.5rem;
+    text-align: center;
+}
+
+
+.ham {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    width: 40px;
+    height: 30px;
+    z-index: 100;
+}
+
+.ham span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(53, 170, 166);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+
+.nav-menu.active {
+    display: flex;
+}
+
+.ham.is-active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.ham.is-active .bar:nth-child(2) {
+    opacity: 0; 
+}
+
+.ham.is-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
