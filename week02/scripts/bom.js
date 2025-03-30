@@ -1,20 +1,26 @@
-const input = document.querySelector("favchapter");
+const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
-const list = document.querySelector("_____");
+const list = document.querySelector("#list");
 
+button.addEventListener("click", function () {
+    if (input.value.trim() !== "") { // Ensure input is not empty
+        const li = document.createElement("li");
+        const deleteButton = document.createElement("button");
 
-const li = document.createElement("Li");
+        li.textContent = input.value;
+        deleteButton.textContent = "❌";
 
+        li.appendChild(deleteButton);
+        list.appendChild(li);
 
-const deleteButton = document.createElement("Button");
+        deleteButton.addEventListener("click", function () {
+            list.removeChild(li);
+            input.focus();
+        });
 
-
-li.textContent = input.ariaValueMax;
-
-deleteButton.textContent = "❌"
-
-
-li.append(deleteButton);
-
-list.append(li);
-
+        input.value = ""; // Clear input field
+        input.focus(); // Refocus input
+    } else {
+        alert("Please enter a valid chapter.");
+    }
+});
