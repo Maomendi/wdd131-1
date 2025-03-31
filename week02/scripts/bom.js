@@ -9,7 +9,7 @@ button.addEventListener("click", function () {
 
         li.textContent = input.value;
         deleteButton.textContent = "❌";
-
+  
         li.appendChild(deleteButton);
         list.appendChild(li);
 

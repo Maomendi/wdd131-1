@@ -1,0 +1,40 @@
+body {
+	font-family: Roboto, helvetica, sans-serif;
+}
+
+
+
+header,
+main,
+footer {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+header {
+    margin: auto;
+    height: 10vh;
+    background-color: rgba(247, 247, 13, 0.928);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px blue;
+}
+
+
+.hero{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.hero img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+
+
