@@ -38,3 +38,73 @@ header {
 
 
 
+.data {
+    border: solid 2px blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.data ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.weather {
+    border: solid 2px blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    
+}
+
+
+.weather ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+     
+ }
+
+
+ @media screen and (max-width: 600px) {
+    .hero {
+        position: relative;
+    }
+    
+    .data, .weather {
+        position: absolute;
+        width: 25%;
+        background-color: rgba(255, 255, 255, 0.8); 
+        padding: 5px;
+        border-radius: 9px;
+        font-size: 0.3em;
+    }
+
+
+    .data h2, .weather h2 {
+        background-color: red;
+    }
+    
+    .data {
+        top: 20%;
+        left: 39px;
+    }
+    
+    .weather {
+        top: 30%;
+        right: 26px;
+    }
+}
+
+
+
