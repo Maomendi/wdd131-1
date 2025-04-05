@@ -74,6 +74,7 @@ header {
     
 }
 
+
 .data li, .weather li {
     padding: 8px 0;
     font-size: 10px;
@@ -91,6 +92,9 @@ header {
      
  }
 
+.weather img{
+display: none;
+}
 
 h2{
     font-size: small;
@@ -127,5 +131,39 @@ h2{
         width: 80%;
         margin: 10px auto;
         text-align: center;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .weather img {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+    }
+    
+    .weather h2 {
+        padding-right: 50px;
+    }
+}
+
+
+
+
+@media (max-width: 899px) {
+    .weather img::after {
+        display: block; 
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width:100%;
+        height: auto;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+    }
+
+    .weather h2 {
+        padding-right: 50px;
     }
 }
