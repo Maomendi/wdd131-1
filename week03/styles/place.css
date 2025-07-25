@@ -152,7 +152,7 @@ h2{
 
 
 
-@media (max-width: 899px) {
+@media (max-width: 500px) {
     .weather img::after {
         display: block; 
         position: absolute;
