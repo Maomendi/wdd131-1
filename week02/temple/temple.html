@@ -7,7 +7,7 @@
     <meta name="descriptor" content="temples photo album"> 
     <link rel="stylesheet" href="./styles/temple-large.css">
     <link rel="stylesheet" href="./styles/temple.css">
-    <link rel="stylesheet" href="./scripts/temples.js">
+    <script src="./scripts/temples.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="/scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,36 +17,24 @@
 <body>
 
     <header>
-        <nav class="navbar">
-            <a href="#" class="nav-branding">Temple album</a>
+  <nav class="navbar">
+    <a href="#" class="nav-branding">Temple album</a>
 
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Old</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">New</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Large</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">small</a>
-                </li>
-            
-            </ul>
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Old</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">New</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Large</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Small</a></li>
+    </ul>
 
-            <div class="ham" id="ham">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-
-            </div>
-
-        </nav>
+    
+    <button class="ham" id="ham" aria-label="Toggle navigation">
+      <span class="hamburger-icon">☰</span>
+      <span class="close-icon">✕</span>
+    </button>
+  </nav>
+</header>
 
         <main>
             <header>Home</header>
