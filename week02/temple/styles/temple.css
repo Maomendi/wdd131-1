@@ -69,7 +69,7 @@ main{
     margin: 2rem;
 }
 
-header{
+main header{
     margin-bottom: 2rem;
     font-size: large;
 }
@@ -112,7 +112,7 @@ footer p{
     flex-direction: column;
     background: #222;
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
     width: 100%;
     text-align: center;
