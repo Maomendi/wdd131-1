@@ -24,7 +24,6 @@ body{
   font-size: 1.5rem;
 }
 
-
 .nav-menu {
   display: flex;
   list-style: none;
@@ -104,31 +103,3 @@ footer p{
 }
 
 
-@media (max-width: 768px) {
-
-  
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #222;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-item {
-    padding: 16px 0;
-  }
-
-  
-  .ham {
-    display: block;
-  }
-}
