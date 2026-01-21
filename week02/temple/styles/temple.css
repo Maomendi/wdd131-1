@@ -24,7 +24,7 @@ body{
   font-size: 1.5rem;
 }
 
-/* Menu (desktop) */
+
 .nav-menu {
   display: flex;
   list-style: none;
@@ -36,7 +36,7 @@ body{
   text-decoration: none;
 }
 
-/* Hamburger button */
+
 .ham {
   display: none;
   background: none;
@@ -46,7 +46,7 @@ body{
   cursor: pointer;
 }
 
-/* Icons */
+
 .hamburger-icon {
   display: block;
 }
@@ -55,7 +55,7 @@ body{
   display: none;
 }
 
-/* When active → show X */
+
 .ham.active .hamburger-icon {
   display: none;
 }
@@ -106,7 +106,7 @@ footer p{
 
 @media (max-width: 768px) {
 
-  /* Hide normal menu */
+  
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -118,7 +118,7 @@ footer p{
     text-align: center;
   }
 
-  /* Show menu when active */
+  
   .nav-menu.active {
     display: flex;
   }
@@ -127,7 +127,7 @@ footer p{
     padding: 16px 0;
   }
 
-  /* Show hamburger */
+  
   .ham {
     display: block;
   }
