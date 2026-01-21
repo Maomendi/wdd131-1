@@ -1,4 +1,7 @@
 
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
+document.getElementById("copyright").innerText = `© ${currentYear}`;
 
-document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+
+const lastModified = new Date(document.lastModified);
+document.getElementById("last-modified").innerText = `last modified: ${document.lastModified}`;
