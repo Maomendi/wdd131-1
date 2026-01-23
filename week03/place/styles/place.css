@@ -4,13 +4,6 @@ body {
 
 
 
-header,
-main,
-footer {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
 header {
     margin: auto;
     height: 10vh;
