@@ -1,3 +1,13 @@
+:root {
+  --col-yellow: #FCD116;
+  --col-blue: #003893;
+  --col-red: #CE1126;
+
+  --bg-light: #ffffff;
+  --text-dark: #1a1a1a;
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
 
 body {
     font-family: Roboto, Helvetica, sans-serif;
@@ -7,11 +17,11 @@ body {
 
 header {
     height: 10vh;
-    background-color: #f7e017; 
+    background-color: var(--col-yellow); 
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 4px solid #0033a0; 
+    border-bottom: 4px solid var(--col-blue); 
 }
 
 .hero {
@@ -35,7 +45,7 @@ header {
     max-width: 300px;
     padding: 12px;
     background-color: rgba(240, 248, 255, 0.95);
-    border: 2px solid #0033a0;
+    border: 2px solid var(--col-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,6 +60,14 @@ header {
 .weather {
     top: 20%;
     right: 5%;
+}
+
+
+.weather img {
+  display: block;
+  width: 48px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .data ul,
@@ -72,7 +90,7 @@ header {
 h2 {
     font-size: 0.9rem;
     margin-bottom: 10px;
-    color: #0033a0;
+    color: var(--col-blue);
 }
 
 
@@ -80,11 +98,11 @@ h2 {
 
 
 footer {
-    background-color: #ce1126; 
-    color: #ffffff;
+    background-color: var(--col-red); 
+    color: var(--bg-light);
     text-align: center;
     padding: 15px 10px;
-    border-top: 4px solid #0033a0; 
+    border-top: 4px solid var(--col-blue); 
 }
 
 footer p {
@@ -102,7 +120,7 @@ footer p {
 
 #last-modified {
     font-size: 0.8rem;
-    color: #f2f2f2;
+    color: var(--bg-light);
 }
 
 
@@ -120,4 +138,26 @@ footer p {
         width: 60px;
         margin-bottom: 10px;
     }
+}
+
+
+@media (min-width: 900px) {
+  .weather h2::after {
+    content: " ⛅";
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .weather img {
+    display: none;
+  }
+  
+  .weather h2::after {
+    content: " ⛅";
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
 }
