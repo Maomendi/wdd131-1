@@ -1,0 +1,149 @@
+
+:root {
+  --slate-dark: #1e293b;
+  --slate-main: #334155;
+  --slate-soft: #475569;
+
+  --green-main: #166534;
+  --green-focus: #15803d;
+
+  --border-main: #cbd5e1;
+  --border-soft: #94a3b8;
+
+  --surface-main: #f8fafc;
+  --surface-soft: #f1f5f9;
+
+  --text-main: #1f2933;
+}
+
+.mf2 {
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background-color: var(--surface-main);
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--slate-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--green-main);
+  text-align: center;
+}
+
+
+
+.mf2 fieldset {
+  border: 1px solid var(--border-main);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--surface-soft);
+}
+
+.mf2 legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: var(--slate-dark);
+}
+
+
+.mf2 label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--slate-main);
+}
+
+
+.mf2 p {
+  margin: 1.25rem 0 0.5rem;
+  font-weight: 600;
+  color: var(--slate-soft);
+}
+
+
+.mf2 input,
+.mf2 select,
+.mf2 textarea {
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-soft);
+  background-color: #ffffff;
+  color: var(--text-main);
+}
+
+
+.mf2 input:focus,
+.mf2 select:focus,
+.mf2 textarea:focus {
+  outline: none;
+  border-color: var(--green-focus);
+  box-shadow: 0 0 0 2px rgba(21, 128, 61, 0.25);
+}
+
+
+.mf2 input[type="text"],
+.mf2 input[type="date"],
+.mf2 select {
+  height: 44px;
+}
+
+.mf2 textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.mf2 input[type="radio"],
+.mf2 input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+  accent-color: var(--green-main);
+}
+
+
+.mf2 label:has(input[type="radio"]),
+.mf2 label:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+
+.mf2 input[type="submit"] {
+  width: 100%;
+  height: 48px;
+  background-color: var(--slate-main);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mf2 input[type="submit"]:hover {
+  background-color: var(--green-main);
+}
+
+
+@media (max-width: 600px) {
+  .mf2 {
+    padding: 1rem;
+  }
+
+  .mf2 fieldset {
+    padding: 1.25rem 1rem;
+  }
+}

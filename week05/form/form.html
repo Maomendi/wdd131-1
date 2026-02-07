@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Mauricio Arismendi">
+  <meta name="description" content="An HTML form displaying conventional styling, showcasing good design practices"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@100..900&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/form.css">
+
+  <script defer src="./scripts/form.js"></script>
+</head>
+
+<body>
+<main>
+<h1>Electrical appliances survey</h1>
+
+<form method="get" action="review.html" class="mf2">
+
+  
+  <fieldset>
+    <legend>Rating</legend>
+
+   
+    <label for="pname">Product Name</label>
+    <select name="product" id="pname" required>
+      <option value="" disabled selected>Select a Product ...</option>
+    </select>
+
+    
+    <p>Overall Rating</p>
+
+    <label>
+      <input type="radio" id="rate" name="rating" value="1" required> ★
+    </label>
+
+    <label>
+      <input type="radio" id="rate" name="rating" value="2"> ★★
+    </label>
+
+    <label>
+      <input type="radio" id="rate" name="rating" value="3"> ★★★
+    </label>
+
+    <label>
+      <input type="radio" id="rate" name="rating" value="4"> ★★★★
+    </label>
+
+    <label>
+      <input type="radio" id="rate" name="rating" value="5"> ★★★★★
+    </label>
+  </fieldset>
+
+  
+  <fieldset>
+    <legend>Usability</legend>
+
+    
+    <label for="installDate">Date of Installation</label>
+    <input type="date" id="installDate" name="installDate" required>
+
+    
+    <p>Useful Features (check all that apply)</p>
+
+    <label for="featureDesign">
+      <input type="checkbox" id="featureDesign" name="features" value="design">
+      Design
+    </label>
+
+    <label for="featurePrice">
+      <input type="checkbox" id="featurePrice" name="features" value="price">
+      Price
+    </label>
+
+    <label for="featurePerformance">
+      <input type="checkbox" id="featurePerformance" name="features" value="performance">
+      Performance
+    </label>
+
+    <label for="featureEase">
+      <input type="checkbox" id="featureEase" name="features" value="ease-of-use">
+      Ease of Use
+    </label>
+  </fieldset>
+
+  
+  <fieldset>
+    <legend>Final Comments</legend>
+
+    
+    <label for="review">Written Review</label>
+    <textarea id="review" name="review"></textarea>
+
+    
+    <label for="username">Your Name</label>
+    <input type="text" id="username" name="username">
+  </fieldset>
+
+  
+  <input type="submit" value="Conclude review">
+
+</form>
+
+</main>
+</body>
+</html>
+
