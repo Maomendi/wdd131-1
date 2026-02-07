@@ -18,93 +18,93 @@
 
 <body>
 <main>
-<h1>Electrical appliances survey</h1>
+    <h1>Electrical appliances survey</h1>
 
-<form method="get" action="review.html" class="mf2">
-
-  
-  <fieldset>
-    <legend>Rating</legend>
-
-   
-    <label for="pname">Product Name</label>
-    <select name="product" id="pname" required>
-      <option value="" disabled selected>Select a Product ...</option>
-    </select>
+    <form method="get" action="review.html" class="mf2">
 
     
-    <p>Overall Rating</p>
-
-    <label>
-      <input type="radio" id="rate1" name="rating" value="1" required> ★
-    </label>
-
-    <label>
-      <input type="radio" id="rate2" name="rating" value="2" required> ★★
-    </label>
-
-    <label>
-      <input type="radio" id="rate3" name="rating" value="3" required> ★★★
-    </label>
-
-    <label>
-      <input type="radio" id="rate4" name="rating" value="4" required> ★★★★
-    </label>
-
-    <label>
-      <input type="radio" id="rate5" name="rating" value="5" required> ★★★★★
-    </label>
-  </fieldset>
-
-  
-  <fieldset>
-    <legend>Usability</legend>
+    <fieldset>
+        <legend>Rating</legend>
 
     
-    <label for="installDate">Date of Installation</label>
-    <input type="date" id="installDate" name="installDate" required>
+        <label for="pname">Product Name</label>
+        <select name="product" id="pname" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        
+        <p>Overall Rating</p>
+
+        <label>
+        <input type="radio" id="rate1" name="rating" value="1" required> ★
+        </label>
+
+        <label>
+        <input type="radio" id="rate2" name="rating" value="2" required> ★★
+        </label>
+
+        <label>
+        <input type="radio" id="rate3" name="rating" value="3" required> ★★★
+        </label>
+
+        <label>
+        <input type="radio" id="rate4" name="rating" value="4" required> ★★★★
+        </label>
+
+        <label>
+        <input type="radio" id="rate5" name="rating" value="5" required> ★★★★★
+        </label>
+    </fieldset>
 
     
-    <p>Useful Features (check all that apply)</p>
+    <fieldset>
+        <legend>Usability</legend>
 
-    <label for="featureDesign">
-      <input type="checkbox" id="featureDesign" name="features" value="design">
-      Design
-    </label>
+        
+        <label for="installDate">Date of Installation</label>
+        <input type="date" id="installDate" name="installDate" required>
 
-    <label for="featurePrice">
-      <input type="checkbox" id="featurePrice" name="features" value="price">
-      Price
-    </label>
+        
+        <p>Useful Features (check all that apply)</p>
 
-    <label for="featurePerformance">
-      <input type="checkbox" id="featurePerformance" name="features" value="performance">
-      Performance
-    </label>
+        <label for="featureDesign">
+        <input type="checkbox" id="featureDesign" name="features" value="design">
+        Design
+        </label>
 
-    <label for="featureEase">
-      <input type="checkbox" id="featureEase" name="features" value="ease-of-use">
-      Ease of Use
-    </label>
-  </fieldset>
+        <label for="featurePrice">
+        <input type="checkbox" id="featurePrice" name="features" value="price">
+        Price
+        </label>
 
-  
-  <fieldset>
-    <legend>Final Comments</legend>
+        <label for="featurePerformance">
+        <input type="checkbox" id="featurePerformance" name="features" value="performance">
+        Performance
+        </label>
+
+        <label for="featureEase">
+        <input type="checkbox" id="featureEase" name="features" value="ease-of-use">
+        Ease of Use
+        </label>
+    </fieldset>
 
     
-    <label for="review">Written Review</label>
-    <textarea id="review" name="review"></textarea>
+    <fieldset>
+        <legend>Final Comments</legend>
+
+        
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review"></textarea>
+
+        
+        <label for="username">Your Name</label>
+        <input type="text" id="username" name="username">
+    </fieldset>
 
     
-    <label for="username">Your Name</label>
-    <input type="text" id="username" name="username">
-  </fieldset>
+    <input type="submit" value="Conclude review">
 
-  
-  <input type="submit" value="Conclude review">
-
-</form>
+    </form>
 
 </main>
 
