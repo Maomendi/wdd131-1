@@ -149,28 +149,42 @@ header {
     background-color: white;
 }
 
-.scenario-box {
-    width: 260px;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+
+.wireframes-section {
+    padding: 4rem 2rem;
+    background-color: var(--soft-cream);
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.scenario-box:hover {
-    transform: translateY(-5px);
+.wireframes-title {
+    font-family: var(--heading-font);
+    color: var(--accent-blue);
+    font-size: 2rem;
+    margin-bottom: 3rem;
 }
 
-.scenario-box img {
-    width: 80px;
-    margin-bottom: 1rem;
+.wireframe-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 
-.scenario-box p {
-    font-family: var(--body-font);
-    color: var(--text-dark);
+.wireframe-item {
+    max-width: 500px;
+}
+
+.wireframe-item h3 {
+    font-family: var(--heading-font);
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+}
+
+.wireframe-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 
