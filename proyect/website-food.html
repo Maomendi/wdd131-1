@@ -7,6 +7,7 @@
     <meta name="description" content="Site plan for Adriana's Classroom language learning website">
 
     <link rel="stylesheet" href="./styles/website.css">
+    <script src="./scripts/website.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -14,15 +15,20 @@
 </head>
 
 <body>
-
 <header>
     <nav class="navbar">
         <div class="logo">Adriana's Classroom</div>
-        <ul class="nav-menu">
-            <li><a href="./website-home.html">Home</a></li>
-            <li><a href="./website-spanish.html">About Me</a></li>
-            <li><a href="./website-food.html">Homemade Colombian Food</a></li>
-            <li><a href="./webiste-form.html">Contact Me</a></li>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="./website-home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./website-spanish.html" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="./website-food.html" class="nav-link">Homemade Colombian Food</a></li>
+            <li class="nav-item"><a href="./webiste-form.html" class="nav-link">Contact Me</a></li>
         </ul>
+
+        
+        <button class="ham" id="ham" aria-label="Toggle navigation">
+            <span class="hamburger-icon">☰</span>
+            <span class="close-icon">✕</span>
+        </button>
     </nav>
 </header>

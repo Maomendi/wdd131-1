@@ -51,3 +51,43 @@ function nextSlide() {
 
 // Automatically change every 5 seconds
 setInterval(nextSlide, 5000);
+
+
+
+
+
+
+
+
+// Form documennt
+
+const otherCheckbox = document.getElementById("otherReason");
+const otherContainer = document.getElementById("otherContainer");
+const form = document.getElementById("contactForm");
+
+otherCheckbox.addEventListener("change", () => {
+
+    if (otherCheckbox.checked) {
+
+      
+        const label = document.createElement("label");
+        label.textContent = "Please explain your reason:";
+
+        
+        const input = document.createElement("input");
+        input.type = "text";
+        input.id = "otherExplanation";
+        input.name = "otherExplanation";
+        input.required = true;
+
+        
+        otherContainer.appendChild(label);
+        otherContainer.appendChild(input);
+
+    } else {
+
+       
+        otherContainer.innerHTML = "";
+    }
+});
+

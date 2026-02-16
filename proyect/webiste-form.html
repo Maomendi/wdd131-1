@@ -7,6 +7,7 @@
     <meta name="description" content="Site plan for Adriana's Classroom language learning website">
 
     <link rel="stylesheet" href="./styles/website.css">
+    <script src="./scripts/website.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -18,11 +19,112 @@
 <header>
     <nav class="navbar">
         <div class="logo">Adriana's Classroom</div>
-        <ul class="nav-menu">
-            <li><a href="./website-home.html">Home</a></li>
-            <li><a href="./website-spanish.html">About Me</a></li>
-            <li><a href="./website-food.html">Homemade Colombian Food</a></li>
-            <li><a href="./webiste-form.html">Contact Me</a></li>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="./website-home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./website-spanish.html" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="./website-food.html" class="nav-link">Homemade Colombian Food</a></li>
+            <li class="nav-item"><a href="./webiste-form.html" class="nav-link">Contact Me</a></li>
         </ul>
+
+        
+        <button class="ham" id="ham" aria-label="Toggle navigation">
+            <span class="hamburger-icon">☰</span>
+            <span class="close-icon">✕</span>
+        </button>
     </nav>
 </header>
+
+
+<main>
+
+    <section class="hero-form">
+
+    <form method="get" action="thankyou.html" class="contact-form" id="contactForm">
+
+    <!-- Learning Interest -->
+        <fieldset>
+            <legend>Spanish Learning Interest</legend>
+
+            <p>How much do you want to learn Spanish?</p>
+
+            <label>
+                <input type="radio" name="learningLevel" value="basic" required>
+                Basic Conversation
+            </label>
+
+            <label>
+                <input type="radio" name="learningLevel" value="intermediate">
+                Intermediate Fluency
+            </label>
+
+            <label>
+                <input type="radio" name="learningLevel" value="advanced">
+                Full Verbal Fluency
+            </label>
+        </fieldset>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Your Information</legend>
+
+            <label for="username">Full Name</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+        </fieldset>
+
+        <!-- Reason for Learning -->
+        <fieldset>
+            <legend>Why do you want to learn Spanish?</legend>
+
+            <label>
+                <input type="checkbox" name="reason" value="work">
+                Work
+            </label>
+
+            <label>
+                <input type="checkbox" name="reason" value="travel">
+                Travel
+            </label>
+
+            <label>
+                <input type="checkbox" name="reason" value="fun">
+                Fun
+            </label>
+
+            <label>
+                <input type="checkbox" name="reason" value="study">
+                Study
+            </label>
+
+            <label>
+                <input type="checkbox" id="otherReason" name="reason" value="other">
+                Other
+            </label>
+
+            <!-- JS will inject explanation field here -->
+            <div id="otherContainer"></div>
+        </fieldset>
+
+        <input type="submit" value="Send Inquiry">
+
+    </form>
+
+
+
+
+
+    </section>
+
+
+
+
+
+</main>
