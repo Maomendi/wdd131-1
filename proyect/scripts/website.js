@@ -10,38 +10,32 @@ ham.addEventListener("click", () => {
 
 
 
-const slides = [
-    {
-        src: "./images/teacher.webp",
-        alt: "Teacher teaching Spanish"
-    },
-    {
-        src: "./images/teacher2.webp",
-        alt: "Students practicing conversation"
-    },
-    {
-        src: "./images/teacher3.webp",
-        alt: "Cultural language activity"
-    }
-];
-
-// Select DOM element
 const slideshowImage = document.querySelector("#slideshow-image");
 
-// Track current slide
+const slides = [
+    { src: "./images/teacher.webp", alt: "Teacher portrait 1" },
+    { src: "./images/teacher2.webp", alt: "Teacher portrait 2" },
+    { src: "./images/teacher3.webp", alt: "Teacher portrait 3" }
+];
+
 let currentIndex = 0;
 
-// Function 1: Display slide
+
+slides.forEach(slide => {
+    const img = new Image();
+    img.src = slide.src;
+});
+
+
 function showSlide(index) {
-    slideshowImage.src = `${slides[index].src}`;
-    slideshowImage.alt = `${slides[index].alt}`;
+    slideshowImage.src = slides[index].src;
+    slideshowImage.alt = slides[index].alt;
 }
 
-// Function 2: Move to next slide
+
 function nextSlide() {
     currentIndex++;
 
-    // Conditional branching
     if (currentIndex >= slides.length) {
         currentIndex = 0;
     }
@@ -49,45 +43,140 @@ function nextSlide() {
     showSlide(currentIndex);
 }
 
-// Automatically change every 5 seconds
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 1000);
 
 
 
 
 
+// form JS
 
 
-
-// Form documennt
-
-const otherCheckbox = document.getElementById("otherReason");
-const otherContainer = document.getElementById("otherContainer");
 const form = document.getElementById("contactForm");
 
-otherCheckbox.addEventListener("change", () => {
+form.addEventListener("submit", function (event) {
 
-    if (otherCheckbox.checked) {
+    event.preventDefault(); // stop normal submission
 
-      
-        const label = document.createElement("label");
-        label.textContent = "Please explain your reason:";
+    // Get form values
+    const name = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const age = document.getElementById("age").value;
+    const country = document.getElementById("country").value;
+    const message = document.getElementById("message").value;
 
-        
-        const input = document.createElement("input");
-        input.type = "text";
-        input.id = "otherExplanation";
-        input.name = "otherExplanation";
-        input.required = true;
+    // Get selected learning level
+    const learningLevel = document.querySelector('input[name="learningLevel"]:checked')?.value;
 
-        
-        otherContainer.appendChild(label);
-        otherContainer.appendChild(input);
+    // Get checked reasons (array)
+    const reasons = Array.from(document.querySelectorAll('input[name="reason"]:checked'))
+                         .map(reason => reason.value);
 
-    } else {
+    // Store everything as an object
+    const formData = {
+        name,
+        email,
+        age,
+        country,
+        learningLevel,
+        reasons,
+        message
+    };
 
-       
-        otherContainer.innerHTML = "";
+    // Save to localStorage
+    localStorage.setItem("contactData", JSON.stringify(formData));
+
+    // Redirect manually
+    window.location.href = "review.html";
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const reviewContainer = document.getElementById("reviewContainer");
+
+    // Get data from localStorage
+    const storedData = localStorage.getItem("contactData");
+
+    if (storedData) {
+
+        const data = JSON.parse(storedData);
+
+        // Create paragraph for message
+        const messageParagraph = document.createElement("p");
+        messageParagraph.textContent = data.message;
+
+        reviewContainer.appendChild(messageParagraph);
+
     }
 });
 
+
+
+
+// about me page
+
+const testimonials = [
+    {
+        name: "Sofia Martinez",
+        age: 17,
+        school: "Colegio Bolivar",
+        testimonial: "Adriana made learning Spanish feel natural and fun!"
+    },
+    {
+        name: "Daniel Rodriguez",
+        age: 18,
+        school: "Colegio Nueva Granada",
+        testimonial: "Her conversational method helped me gain confidence quickly."
+    },
+    {
+        name: "Camila Torres",
+        age: 16,
+        school: "Colegio Bolivar",
+        testimonial: "I improved my pronunciation tremendously in just weeks."
+    },
+    {
+        name: "Andres Lopez",
+        age: 19,
+        school: "Colegio Nueva Granada",
+        testimonial: "She explains grammar in such a clear and simple way."
+    },
+    {
+        name: "Valentina Cruz",
+        age: 17,
+        school: "Colegio Bolivar",
+        testimonial: "Classes feel engaging and interactive every time."
+    }
+];
+
+
+function createTestimonialCards() {
+
+    const grid = document.querySelector(".testimonial-grid");
+    grid.innerHTML = "";
+
+    testimonials.forEach(student => {
+
+        let card = document.createElement("div");
+        card.classList.add("testimonial-card");
+
+        let name = document.createElement("h3");
+        let age = document.createElement("p");
+        let school = document.createElement("p");
+        let message = document.createElement("p");
+
+        name.textContent = student.name;
+        age.innerHTML = `<strong>Age:</strong> ${student.age}`;
+        school.innerHTML = `<strong>School:</strong> ${student.school}`;
+        message.textContent = `"${student.testimonial}"`;
+
+        card.appendChild(name);
+        card.appendChild(age);
+        card.appendChild(school);
+        card.appendChild(message);
+
+        grid.appendChild(card);
+    });
+}
+
+createTestimonialCards();

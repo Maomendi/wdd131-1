@@ -229,5 +229,259 @@ header {
 
 
 
+/*----- Form styling------*/
 
+.hero-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background-color: var(--accent-blue);
+}
+
+.form-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.form-image img {
+  width: 100%;
+  max-width: 740px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+/* FORM SIDE */
+
+.contact-form {
+  flex: 1.2;
+}
+
+/* ============================= */
+/* CONTACT FORM STYLING */
+/* ============================= */
+
+.contact-form {
+  max-width: 680px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: var(--body-font);
+  line-height: 1.2;
+  background-color: white;
+  color: var(--text-dark);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* FIELDSETS */
+
+.contact-form fieldset {
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  background-color: var(--soft-cream);
+}
+
+.contact-form legend {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+}
+
+
+/* LABELS */
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.contact-form p {
+  margin: 1.25rem 0 0.5rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  margin-top: 0.4rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+  background-color: white;
+  color: var(--text-dark);
+  font-family: var(--body-font);
+}
+
+
+/* INPUT FOCUS */
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+  box-shadow: 0 0 0 3px rgba(230, 179, 37, 0.25);
+}
+
+
+/* TEXTAREA */
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+
+/* RADIO + CHECKBOX */
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+  accent-color: var(--primary-yellow);
+}
+
+
+/* Align radio/checkbox labels horizontally */
+
+.contact-form label:has(input[type="radio"]),
+.contact-form label:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-form input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background-color: var(--accent-blue);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: var(--primary-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form fieldset {
+    padding: 1.25rem 1rem;
+  }
+
+
+  @media (max-width: 900px) {
+  .hero-form {
+    flex-direction: column;
+  }
+
+  .form-image {
+    order: -1;
+  }
+
+  .form-image img {
+    max-width: 300px;
+  }
+}
+
+}
+
+
+/*-------About me page-------*/
+
+/* SECTION 1 */
+.about-intro {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.about-image img {
+  width: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+
+/* SECTION 2 */
+.about-hobbies {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hobby-box {
+  background: var(--soft-cream);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 250px;
+}
+
+.hobby-box img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+
+/* SECTION 3 */
+.about-testimonials {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
 

@@ -21,8 +21,8 @@
         <div class="logo">Adriana's Classroom</div>
         <ul class="nav-menu" id="nav-menu">
             <li class="nav-item"><a href="./website-home.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="./website-spanish.html" class="nav-link">About Me</a></li>
-            <li class="nav-item"><a href="./website-food.html" class="nav-link">Homemade Colombian Food</a></li>
+            <li class="nav-item"><a href="./website-aboutme.html" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="./website-class.html" class="nav-link">Spanish Class</a></li>
             <li class="nav-item"><a href="./webiste-form.html" class="nav-link">Contact Me</a></li>
         </ul>
 
@@ -39,89 +39,108 @@
 
     <section class="hero-form">
 
-    <form method="get" action="thankyou.html" class="contact-form" id="contactForm">
+        <form method="get" action="review.html" class="contact-form" id="contactForm">
 
-    <!-- Learning Interest -->
-        <fieldset>
-            <legend>Spanish Learning Interest</legend>
+        
+            <fieldset>
+                <legend>Spanish Learning Interest</legend>
 
-            <p>How much do you want to learn Spanish?</p>
+                <p>How much do you want to learn Spanish?</p>
 
-            <label>
-                <input type="radio" name="learningLevel" value="basic" required>
-                Basic Conversation
-            </label>
+                <label>
+                    <input type="radio" name="learningLevel" value="basic" required>
+                    Basic Conversation
+                </label>
 
-            <label>
-                <input type="radio" name="learningLevel" value="intermediate">
-                Intermediate Fluency
-            </label>
+                <label>
+                    <input type="radio" name="learningLevel" value="intermediate">
+                    Intermediate Fluency
+                </label>
 
-            <label>
-                <input type="radio" name="learningLevel" value="advanced">
-                Full Verbal Fluency
-            </label>
-        </fieldset>
+                <label>
+                    <input type="radio" name="learningLevel" value="advanced">
+                    Full Verbal Fluency
+                </label>
+            </fieldset>
 
-        <!-- Personal Information -->
-        <fieldset>
-            <legend>Your Information</legend>
+            
+            <fieldset>
+                <legend>Your Information</legend>
 
-            <label for="username">Full Name</label>
-            <input type="text" id="username" name="username" required>
+                <label for="username">Full Name</label>
+                <input type="text" id="username" name="username" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="age">Age</label>
-            <input type="number" id="age" name="age" required>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
 
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country" required>
-        </fieldset>
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" required>
+            </fieldset>
 
-        <!-- Reason for Learning -->
-        <fieldset>
-            <legend>Why do you want to learn Spanish?</legend>
+            
+            <fieldset>
+                <legend>Why do you want to learn Spanish?</legend>
 
-            <label>
-                <input type="checkbox" name="reason" value="work">
-                Work
-            </label>
+                <label>
+                    <input type="checkbox" name="reason" value="work">
+                    Work
+                </label>
 
-            <label>
-                <input type="checkbox" name="reason" value="travel">
-                Travel
-            </label>
+                <label>
+                    <input type="checkbox" name="reason" value="travel">
+                    Travel
+                </label>
 
-            <label>
-                <input type="checkbox" name="reason" value="fun">
-                Fun
-            </label>
+                <label>
+                    <input type="checkbox" name="reason" value="fun">
+                    Fun
+                </label>
 
-            <label>
-                <input type="checkbox" name="reason" value="study">
-                Study
-            </label>
+                <label>
+                    <input type="checkbox" name="reason" value="study">
+                    Study
+                </label>
 
-            <label>
-                <input type="checkbox" id="otherReason" name="reason" value="other">
-                Other
-            </label>
+                <label>
+                    <input type="checkbox" id="otherReason" name="reason" value="other">
+                    Other
+                </label>
 
-            <!-- JS will inject explanation field here -->
-            <div id="otherContainer"></div>
-        </fieldset>
-
-        <input type="submit" value="Send Inquiry">
-
-    </form>
+                
+                <div id="otherContainer"></div>
+            </fieldset>
 
 
+            <fieldset>
+                <legend>Questions or Comments</legend>
+
+                <label for="message">
+                    Do you have any questions or would you like to share something before we get started?
+                </label>
+
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Write your questions or comments here...">
+                </textarea>
+            </fieldset>
+
+
+            <input type="submit" value="Let's get in contact">
+
+        </form>
+
+        <div class="form-image">
+            <img src="./images/teacher-form.webp" alt="teacher looking at the user">
+        </div>
 
 
 
     </section>
+
 
 
 
