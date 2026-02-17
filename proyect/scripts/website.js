@@ -56,23 +56,21 @@ const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function (event) {
 
-    event.preventDefault(); // stop normal submission
+    event.preventDefault();
 
-    // Get form values
+    
     const name = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const age = document.getElementById("age").value;
     const country = document.getElementById("country").value;
     const message = document.getElementById("message").value;
 
-    // Get selected learning level
     const learningLevel = document.querySelector('input[name="learningLevel"]:checked')?.value;
 
-    // Get checked reasons (array)
+    
     const reasons = Array.from(document.querySelectorAll('input[name="reason"]:checked'))
                          .map(reason => reason.value);
 
-    // Store everything as an object
     const formData = {
         name,
         email,
@@ -83,10 +81,9 @@ form.addEventListener("submit", function (event) {
         message
     };
 
-    // Save to localStorage
+   
     localStorage.setItem("contactData", JSON.stringify(formData));
 
-    // Redirect manually
     window.location.href = "review.html";
 });
 
@@ -95,14 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const reviewContainer = document.getElementById("reviewContainer");
 
-    // Get data from localStorage
+ 
     const storedData = localStorage.getItem("contactData");
 
     if (storedData) {
 
         const data = JSON.parse(storedData);
 
-        // Create paragraph for message
         const messageParagraph = document.createElement("p");
         messageParagraph.textContent = data.message;
 
