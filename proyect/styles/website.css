@@ -429,7 +429,7 @@ header {
   display: flex;
   gap: 3rem;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem 15rem;
 }
 
 .about-image img {
@@ -485,3 +485,43 @@ header {
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
+
+
+
+/*------spanish class------*/
+
+.class-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 8%;
+}
+
+.class-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.class-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.class-text {
+    max-width: 500px;
+}
+
+.class-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.class-text p {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
+}
