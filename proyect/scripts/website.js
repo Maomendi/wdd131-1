@@ -1,172 +1,126 @@
 const ham = document.getElementById("ham");
 const navMenu = document.getElementById("nav-menu");
 
-ham.addEventListener("click", () => {
-  ham.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-
-
-
+if (ham && navMenu) {
+    ham.addEventListener("click", () => {
+        ham.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+}
 
 const slideshowImage = document.querySelector("#slideshow-image");
 
-const slides = [
-    { src: "./images/teacher.webp", alt: "Teacher portrait 1" },
-    { src: "./images/teacher2.webp", alt: "Teacher portrait 2" },
-    { src: "./images/teacher3.webp", alt: "Teacher portrait 3" }
-];
+if (slideshowImage) {
 
-let currentIndex = 0;
+    const slides = [
+        { src: "./images/teacher.webp", alt: "Teacher portrait 1" },
+        { src: "./images/teacher2.webp", alt: "Teacher portrait 2" },
+        { src: "./images/teacher3.webp", alt: "Teacher portrait 3" }
+    ];
 
+    let currentIndex = 0;
 
-slides.forEach(slide => {
-    const img = new Image();
-    img.src = slide.src;
-});
-
-
-function showSlide(index) {
-    slideshowImage.src = slides[index].src;
-    slideshowImage.alt = slides[index].alt;
-}
-
-
-function nextSlide() {
-    currentIndex++;
-
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
+    function showSlide(index) {
+        slideshowImage.src = slides[index].src;
+        slideshowImage.alt = slides[index].alt;
     }
 
-    showSlide(currentIndex);
+    function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000);
 }
-
-setInterval(nextSlide, 1000);
-
-
-
-
-
-// form JS
-
 
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", function (event) {
+if (form) {
+    form.addEventListener("submit", function (event) {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    
-    const name = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const age = document.getElementById("age").value;
-    const country = document.getElementById("country").value;
-    const message = document.getElementById("message").value;
+        const name = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const age = document.getElementById("age").value;
+        const country = document.getElementById("country").value;
+        const message = document.getElementById("message").value;
 
-    const learningLevel = document.querySelector('input[name="learningLevel"]:checked')?.value;
+        const learningLevel = document.querySelector('input[name="learningLevel"]:checked')?.value;
 
-    
-    const reasons = Array.from(document.querySelectorAll('input[name="reason"]:checked'))
-                         .map(reason => reason.value);
+        const reasons = Array.from(document.querySelectorAll('input[name="reason"]:checked'))
+            .map(reason => reason.value);
 
-    const formData = {
-        name,
-        email,
-        age,
-        country,
-        learningLevel,
-        reasons,
-        message
-    };
+        const formData = {
+            name,
+            email,
+            age,
+            country,
+            learningLevel,
+            reasons,
+            message
+        };
 
-   
-    localStorage.setItem("contactData", JSON.stringify(formData));
+        localStorage.setItem("contactData", JSON.stringify(formData));
 
-    window.location.href = "review.html";
-});
+        window.location.href = "review.html";
+    });
+}
 
+const reviewContainer = document.getElementById("reviewContainer");
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const reviewContainer = document.getElementById("reviewContainer");
-
- 
+if (reviewContainer) {
     const storedData = localStorage.getItem("contactData");
 
     if (storedData) {
-
         const data = JSON.parse(storedData);
 
         const messageParagraph = document.createElement("p");
         messageParagraph.textContent = data.message;
 
         reviewContainer.appendChild(messageParagraph);
-
     }
-});
+}
 
+const grid = document.querySelector(".testimonial-grid");
 
+if (grid) {
 
-const testimonials = [
-    {
-        name: "Sofia Martinez",
-        age: 17,
-        school: "Colegio Bolivar",
-        testimonial: "Adriana made learning Spanish feel natural and fun!"
-    },
-    {
-        name: "Daniel Rodriguez",
-        age: 18,
-        school: "Colegio Nueva Granada",
-        testimonial: "Her conversational method helped me gain confidence quickly."
-    },
-    {
-        name: "Camila Torres",
-        age: 16,
-        school: "Colegio Bolivar",
-        testimonial: "I improved my pronunciation tremendously in just weeks."
-    },
-    {
-        name: "Andres Lopez",
-        age: 19,
-        school: "Colegio Nueva Granada",
-        testimonial: "She explains grammar in such a clear and simple way."
-    },
-    {
-        name: "Valentina Cruz",
-        age: 17,
-        school: "Colegio Bolivar",
-        testimonial: "Classes feel engaging and interactive every time."
-    }
-];
-
-
-function createTestimonialCards() {
-
-    const grid = document.querySelector(".testimonial-grid");
-    grid.innerHTML = "";
+    const testimonials = [
+        {
+            name: "Sofia Martinez",
+            age: 17,
+            school: "Colegio Bolivar",
+            testimonial: "Adriana made learning Spanish feel natural and fun!"
+        },
+        {
+            name: "Daniel Rodriguez",
+            age: 18,
+            school: "Colegio Nueva Granada",
+            testimonial: "Her conversational method helped me gain confidence quickly."
+        },
+        {
+            name: "Camila Torres",
+            age: 16,
+            school: "Colegio Bolivar",
+            testimonial: "I improved my pronunciation tremendously in just weeks."
+        }
+    ];
 
     testimonials.forEach(student => {
 
         let card = document.createElement("div");
         card.classList.add("testimonial-card");
 
-        let name = document.createElement("h3");
-        let age = document.createElement("p");
-        let school = document.createElement("p");
-        let message = document.createElement("p");
-
-        name.textContent = student.name;
-        age.innerHTML = `<strong>Age:</strong> ${student.age}`;
-        school.innerHTML = `<strong>School:</strong> ${student.school}`;
-        message.textContent = `"${student.testimonial}"`;
-
-        card.appendChild(name);
-        card.appendChild(age);
-        card.appendChild(school);
-        card.appendChild(message);
+        card.innerHTML = `
+            <h3>${student.name}</h3>
+            <p><strong>Age:</strong> ${student.age}</p>
+            <p><strong>School:</strong> ${student.school}</p>
+            <p>"${student.testimonial}"</p>
+        `;
 
         grid.appendChild(card);
     });
