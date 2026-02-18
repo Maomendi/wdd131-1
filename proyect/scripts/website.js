@@ -33,7 +33,7 @@ if (slideshowImage) {
         showSlide(currentIndex);
     }
 
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 1000);
 }
 
 const form = document.getElementById("contactForm");
