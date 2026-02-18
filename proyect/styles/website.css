@@ -455,13 +455,20 @@ header {
   display: flex;
   gap: 3rem;
   align-items: center;
-  padding: 4rem 15rem;
+  padding: 4rem 2rem; /* FIXED */
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 .about-image img {
   width: 350px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.about-text p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #444;
 }
 
 .about-text {
@@ -471,11 +478,18 @@ header {
 
 /* SECTION 2 */
 .about-hobbies {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 3rem;
+}
+
+.hobbies-container {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 3rem 2rem;
-  text-align: center;
 }
 
 .hobby-box {
@@ -483,11 +497,6 @@ header {
   padding: 2rem;
   border-radius: 16px;
   width: 250px;
-}
-
-.hobby-box img {
-  width: 80px;
-  margin-bottom: 1rem;
 }
 
 
@@ -512,6 +521,37 @@ header {
 }
 
 
+@media (max-width: 768px) {
+
+    .about-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+     .hobbies-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+    .hobby-box {
+      width: 100%;
+      max-width: 350px;
+  }
+
+}
 
 
 /*------spanish class------*/
@@ -579,3 +619,21 @@ header {
         height: auto;
     }
 }
+
+
+
+
+
+footer {
+    margin: 0.5rem;
+    background-color: var(--soft-cream);
+    color: var(--text-dark);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p{
+    margin: 0.5rem;
+    text-align: center;
+}
+
