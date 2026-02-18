@@ -640,3 +640,16 @@ footer p{
     text-align: center;
 }
 
+img {
+  animation: fade 10s ;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
